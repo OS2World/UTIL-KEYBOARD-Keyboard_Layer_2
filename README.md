@@ -17,5 +17,5 @@ AUTHORS
 
 LINKS
 ===============
-* http://es.ecomstation.ru/apecs.php?action=item&id=582
+* http://glass.ptv.ru/
 
