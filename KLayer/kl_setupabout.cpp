@@ -17,7 +17,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * $Id: kl_setupabout.cpp,v 1.7 2005/12/05 07:46:59 glass Exp $
+ * $Id$
  */
 
 #define  INCL_WIN

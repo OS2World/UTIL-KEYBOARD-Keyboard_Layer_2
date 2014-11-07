@@ -17,7 +17,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * $Id: kl_setuplayer_p2.cpp,v 1.9 2005/10/01 08:42:52 glass Exp $
+ * $Id$
  */
 
 #define  INCL_WIN

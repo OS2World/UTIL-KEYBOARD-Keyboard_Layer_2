@@ -1,4 +1,4 @@
-# $Id: makefile,v 1.8 2004/08/10 12:49:51 glass Exp $
+# $Id$
 
 CFLAGS=-Gm -Sp1 -Q+ -W3 -Wuse+ -O+ -Gl+ -I..\VDD
 DFLAGS=-B"/OPTF /EXEP:2 /PM:PM /DLL /MAP:kl_engine.map"

@@ -1,4 +1,4 @@
-# $Id: makefile,v 1.7 2004/07/21 06:49:55 glass Exp $
+# $Id$
 
 CFLAGS=/Sm /Sp1 /Gv /Rn /Gr /Gn /O /Gs /Ss /Tdc /W1 /Wuse+ /I../KLayer /Q /DM_I386 /DCYRILLIC
 LFLAGS=/B"/NOI /NOE /NOD /NOL /EXEP:2 /VDD /MAP"

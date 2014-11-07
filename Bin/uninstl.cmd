@@ -1,5 +1,5 @@
 /* REXX deinstallation script for Keyboard Layer/2 
- * Copyright (C) 1998-2006 Dmitry A.Steklenev
+ * Copyright (C) 1998-2013 Dmitry A.Steklenev
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * $Id: uninstl.cmd,v 1.9 2006/02/22 17:15:58 glass Exp $
+ * $Id$
  */
 
 globals = "color. sys. msg."
@@ -32,7 +32,7 @@ color.info  = "1B"x"[1;32m"
 
 cls
 say color.bold  || "Keyboard Layer/2" || color.usual || " Deinstallation"
-say color.usual || "Copyright (C) 1998-2006 Dmitry A.Steklenev"
+say color.usual || "Copyright (C) 1998-2013 Dmitry A.Steklenev"
 say color.usual || ""
 
 /* Initializing */
@@ -97,6 +97,8 @@ call DeleteFile "Icons\foldera.ico"
 call DeleteFile "Icons\folderb.ico"
 call DeleteFile "Icons\layout.ico"
 call DeleteFile "Icons\uninstl.ico"
+call DeleteFile "Icons\read.ico"
+call DeleteFile "Icons\url.ico"
 call DeleteFile "NLS\readme.001"
 call DeleteFile "NLS\readme.007"
 call DeleteFile "NLS\insmsg.001"

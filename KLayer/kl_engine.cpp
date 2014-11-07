@@ -17,7 +17,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * $Id: kl_engine.cpp,v 1.43 2006/02/13 11:50:56 glass Exp $
+ * $Id$
  */
 
 #include "kl_engine.h"

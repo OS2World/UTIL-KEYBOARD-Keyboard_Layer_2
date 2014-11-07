@@ -1,4 +1,4 @@
-# $Id: makefile,v 1.4 2004/01/21 16:42:31 glass Exp $
+# $Id$
 
 CFLAGS=/Sp1 /Q+ /W3 /Wuse+ /O+ /Oc+ /Gl+ /Gs+ /I../KLayer
 LFLAGS=/B"/OPTF /EXEP:2"

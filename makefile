@@ -1,4 +1,4 @@
-# $Id: makefile,v 1.3 2004/01/21 16:42:31 glass Exp $
+# $Id$
 
 all:
   @cd KLayer

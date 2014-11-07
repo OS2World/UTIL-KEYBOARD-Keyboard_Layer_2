@@ -1,5 +1,5 @@
 /* REXX installation script for Keyboard Layer/2 
- * Copyright (C) 1998-2006 Dmitry A.Steklenev
+ * Copyright (C) 1998-2013 Dmitry A.Steklenev
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * $Id: install.cmd,v 1.13 2006/02/22 17:15:58 glass Exp $
+ * $Id$
  */
 
 globals = "color. sys. msg."
@@ -32,7 +32,7 @@ color.info  = "1B"x"[1;32m"
 
 cls
 say color.bold  || "Keyboard Layer/2" || color.usual || " Installation"
-say color.usual || "Copyright (C) 1998-2006 Dmitry A.Steklenev"
+say color.usual || "Copyright (C) 1998-2013 Dmitry A.Steklenev"
 say color.usual || ""
 
 /* Initializing */
@@ -92,12 +92,10 @@ if \CopyFile( "Icons\layout.ico" , sys.ins_path"\Icons\layout.ico"  ) then call 
 if \CopyFile( "Icons\uninstl.ico", sys.ins_path"\Icons\uninstl.ico" ) then call terminate
 if \CopyFile( "Icons\read.ico"   , sys.ins_path"\Icons\read.ico"    ) then call terminate
 if \CopyFile( "Icons\url.ico"    , sys.ins_path"\Icons\url.ico"     ) then call terminate
-if \CopyFile( "Icons\donate.ico" , sys.ins_path"\Icons\donate.ico"  ) then call terminate
 if \CopyFile( "NLS\readme.001"   , sys.ins_path"\NLS\readme.001"    ) then call terminate
 if \CopyFile( "NLS\readme.007"   , sys.ins_path"\NLS\readme.007"    ) then call terminate
 if \CopyFile( "NLS\insmsg.001"   , sys.ins_path"\NLS\insmsg.001"    ) then call terminate
 if \CopyFile( "NLS\insmsg.007"   , sys.ins_path"\NLS\insmsg.007"    ) then call terminate
-if \CopyFile( "NLS\donate.001"   , sys.ins_path"\NLS\donate.001"    ) then call terminate
 if \CopyFile( "license"          , sys.ins_path"\license"           ) then call terminate
 if \CopyFile( "layer3.cat"       , sys.ins_path"\layer3.cat"        ) then call terminate
 if \CopyFile( "layer3.exe"       , sys.ins_path"\layer3.exe"        ) then call terminate
@@ -177,13 +175,7 @@ call CreateObject "R", "WPUrl", "GlassMan Website",,
                   "<KL2_FLD>",,
                   "OBJECTID=<KL2_URL>;"                           ||,
                   "ICONFILE="sys.ins_path"\Icons\url.ico;"        ||,
-                  "URL=http://glass.os2.spb.ru/english;"
-
-call CreateObject "R", "WPUrl", "Please, support this" || "0D0A"x || "software project",,
-                  "<KL2_FLD>",,
-                  "OBJECTID=<KL2_DONATE>;"                        ||,
-                  "ICONFILE="sys.ins_path"\Icons\donate.ico;"     ||,
-                  "URL="sys.ins_path"\NLS\donate.001;"
+                  "URL=http://glass.ptv.ru/klayer.html;"
 end
 
 call CreateObject "R", "WPProgram", "Uninstall Keyboard Layer/2",,
@@ -254,7 +246,9 @@ old.18 = sys.ins_path"\layer.exe"
 old.19 = sys.ins_path"\layer.sys"
 old.20 = sys.ins_path"\layer.dll"
 old.21 = sys.ins_path"\layer3.sys"
-old.0  = 21
+old.22 = sys.ins_path"\NLS\donate.001"
+old.23 = sys.ins_path"\Icons\donate.ico"
+old.0  = 23
 
 do i = 1 to old.0
    if stream( old.i, "c", "query exists" ) \= "" then do

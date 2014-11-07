@@ -17,7 +17,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * $Id: kl_vdd.c,v 1.15 2005/10/01 08:43:49 glass Exp $
+ * $Id$
  */
 
 #define  INCL_VDDHELPERS
