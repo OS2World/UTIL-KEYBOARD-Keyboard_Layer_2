@@ -1,0 +1,4 @@
+OBJLST = layout.obj getopt.obj kl_broker.obj
+
+kl_broker.obj: ..\KLayer\kl_broker.cpp
+getopt.c: getopt.h

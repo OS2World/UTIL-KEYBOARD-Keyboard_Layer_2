@@ -1,0 +1,47 @@
+LIBRARY  LAYER3 INITGLOBAL TERMGLOBAL
+CODE     LOADONCALL SHARED
+DATA     LOADONCALL SHARED
+PROTMODE
+
+EXPORTS
+  engine_start                 @1
+  engine_stop                  @2
+
+  set_float_on_top             @4
+  set_beeps                    @7
+  set_vdm_synchronize          @9
+  set_vdm_color                @10
+  set_default_layer            @11
+  set_trigger_hotkeys          @13
+  set_trigger_timeout          @14
+  set_layout                   @15
+  set_layouts_layer            @16
+
+  is_float_on_top_enabled      @30
+  is_beeps_enabled             @31
+  is_vdm_supported             @32
+  is_vdm_synchronized          @33
+  is_multilayered              @34
+
+  get_default_layer            @40
+  get_trigger_hotkeys          @41
+  get_trigger_timeout          @42
+  get_layouts_layer            @43
+
+  ini_put_data                 @50
+  ini_put_long                 @51
+  ini_put_short                @52
+  ini_put_chars                @53
+  ini_put_window               @54
+  ini_get_data                 @60
+  ini_get_long                 @61
+  ini_get_short                @62
+  ini_get_chars                @63
+  ini_get_window               @64
+
+  hkey_clear                   @70
+  hkey_assign                  @71
+  hkey_empty                   @72
+  hkey_find                    @73
+  hkey_exclude                 @74
+

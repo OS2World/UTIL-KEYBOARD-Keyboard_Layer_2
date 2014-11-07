@@ -1,0 +1,157 @@
+DLLLST = kl_engine.obj          \
+         kl_profiles.obj        \
+         kl_monitors.obj        \
+         kl_broker.obj          \
+         kl_hotkey.obj          \
+         kl_trigger.obj
+
+OBJLST = kl_messages.obj        \
+         kl_broker.obj          \
+         kl_pipe.obj            \
+         kl_hotkey.obj          \
+         kl_setuppage.obj       \
+         kl_setuplayer_p1.obj   \
+         kl_setuplayer_p2.obj   \
+         kl_setuplayouts_p1.obj \
+         kl_setuplayouts_p2.obj \
+         kl_setuplanguage.obj   \
+         kl_setupabout.obj      \
+         kl_setuphkeys.obj      \
+         kl_bundle.obj          \
+         kl_setup.obj           \
+         kl_popup.obj           \
+         kl_systray.obj         \
+         kl_viewer.obj          \
+         kl_main.obj            \
+         kl_application.obj     \
+         kl_layer.lib
+
+kl_monitors.h:          kl_global.h
+kl_application.h:       kl_global.h
+kl_trigger.h:           kl_global.h
+kl_messages.h:          kl_global.h
+kl_profiles.h:          kl_global.h
+kl_broker.h:            kl_global.h
+kl_popup.h:             kl_broker.h
+kl_setup.h:             kl_global.h
+kl_hotkey.h:            kl_global.h
+
+kl_viewer.h:            kl_global.h \
+                        kl_popup.h  \
+                        kl_bundle.h
+
+kl_engine.h:            kl_global.h \
+                        kl_hotkey.h \
+                        kl_profiles.h
+
+kl_setuppage.h:         kl_setup.h  \
+                        kl_engine.h
+
+kl_bundle.h:            kl_broker.h \
+                        kl_hotkey.h
+
+kl_setuplayer_p1.h:     kl_setuppage.h
+kl_setuplayer_p2.h:     kl_setuppage.h
+kl_setuplanguage.h:     kl_setuppage.h
+kl_setupabout.h:        kl_setuppage.h
+kl_setuphkeys.h:        kl_hotkey.h
+
+kl_setuplayouts_p1.h:   kl_broker.h      \
+                        kl_bundle.h      \
+                        kl_setuppage.h   \
+                        kl_setuphkeys.h
+
+kl_setuplayouts_p2.h:   kl_setuppage.h
+
+kl_profiles.cpp:        kl_profiles.h
+kl_trigger.cpp:         kl_trigger.h
+kl_messages.cpp:        kl_messages.h
+kl_broker.cpp:          kl_broker.h
+kl_systray.cpp:         kl_systray.h
+kl_application.cpp:     kl_application.h
+kl_hotkey.cpp:          kl_hotkey.h
+
+kl_monitors.cpp:        kl_monitors.h    \
+                        kl_trigger.h     \
+                        kl_engine.h
+
+kl_engine.cpp:          kl_trigger.h     \
+                        kl_monitors.h    \
+                        kl_broker.h      \
+                        kl_engine.h
+
+kl_pipe.cpp:            kl_pipe.h        \
+                        kl_engine.h
+
+kl_setuppage.cpp:       kl_setuppage.h   \
+                        kl_application.h
+
+kl_setuplayer_p1.cpp:   kl_ids.h         \
+                        kl_messages.h    \
+                        kl_engine.h      \
+                        kl_pipe.h        \
+                        kl_systray.h     \
+                        kl_application.h \
+                        kl_setuplayer_p1.h
+
+kl_setuplayer_p2.cpp:   kl_ids.h         \
+                        kl_messages.h    \
+                        kl_engine.h      \
+                        kl_setuplayer_p2.h
+
+kl_setuplayouts_p1.cpp: kl_ids.h         \
+                        kl_messages.h    \
+                        kl_setuplayouts_p1.h
+
+kl_setuplayouts_p2.cpp: kl_ids.h         \
+                        kl_messages.h    \
+                        kl_setuplayouts_p2.h
+
+kl_setuplanguage.cpp:   kl_ids.h         \
+                        kl_messages.h    \
+                        kl_engine.h      \
+                        kl_setuplanguage.h
+
+kl_setupabout.cpp:      kl_ids.h         \
+                        kl_messages.h    \
+                        kl_setupabout.h  \
+                        kl_application.h
+
+kl_setuphkeys.cpp:      kl_ids.h         \
+                        kl_messages.h    \
+                        kl_engine.h      \
+                        kl_application.h \
+                        kl_setuphkeys.h
+
+kl_setup.cpp:           kl_ids.h             \
+                        kl_setup.h           \
+                        kl_messages.h        \
+                        kl_engine.h          \
+                        kl_setuplayer_p1.h   \
+                        kl_setuplayer_p2.h   \
+                        kl_setuplanguage.h   \
+                        kl_setupabout.h      \
+                        kl_setuplayouts_p1.h \
+                        kl_setuplayouts_p2.h \
+                        kl_application.h
+
+kl_popup.cpp:           kl_popup.h     \
+                        kl_ids.h       \
+                        kl_messages.h
+
+kl_bundle.cpp:          kl_bundle.h    \
+                        kl_engine.h    \
+                        kl_ids.h
+
+kl_viewer.cpp:          kl_viewer.h    \
+                        kl_engine.h    \
+                        kl_systray.h   \
+                        kl_pipe.h      \
+                        kl_setup.h     \
+                        kl_ids.h
+
+kl_main.cpp:            kl_engine.h    \
+                        kl_messages.h  \
+                        kl_ids.h       \
+                        kl_application.h
+

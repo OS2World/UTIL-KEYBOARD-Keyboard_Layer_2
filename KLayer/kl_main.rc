@@ -1,0 +1,298 @@
+
+/* OS/2 Warp 4.0 Resource Script File - Created by Universal Resource Editor */
+
+#define INCL_WINSYS
+#define INCL_WINBIDI
+#define INCL_WINSTDDLGS
+#define INCL_WINSTDSPIN
+#define INCL_NLS
+#define INCL_SW
+
+#include <os2.h>
+
+#include "kl_ids.h"
+
+ICON        ID_WIN_INDICATOR                   "BMP\\layer.ico"
+ICON        ID_WIN_LANGUAGE                    "BMP\\language.ico"
+ICON        ID_ICO_KEYS                        "BMP\\keys.ico"
+ICON        SC_SIZE                            "FLG\\flg-latin.ico"
+ICON        SC_MOVE                            "FLG\\flg-national.ico"
+ICON        SC_MINIMIZE                        "FLG\\flg-other.ico"
+ICON        ID_FLG_BA                          "FLG\\fba-bosnia.ico"
+ICON        ID_FLG_BE                          "FLG\\fbe-belgium.ico"
+ICON        ID_FLG_BG                          "FLG\\fbg-bulgaria.ico"
+ICON        ID_FLG_BR                          "FLG\\fbr-brazil.ico"
+ICON        ID_FLG_BY                          "FLG\\fby-belarus.ico"
+ICON        ID_FLG_CA                          "FLG\\fca-canada.ico"
+ICON        ID_FLG_CF                          "FLG\\fcf-canada.ico"
+ICON        ID_FLG_CZ                          "FLG\\fcz-czech.ico"
+ICON        ID_FLG_DE                          "FLG\\fde-germany.ico"
+ICON        ID_FLG_DK                          "FLG\\fdk-denmark.ico"
+ICON        ID_FLG_EE                          "FLG\\fee-estonia.ico"
+ICON        ID_FLG_FR                          "FLG\\ffr-france.ico"
+ICON        ID_FLG_GK                          "FLG\\fgk-greece.ico"
+ICON        ID_FLG_GR                          "FLG\\fgr-germany.ico"
+ICON        ID_FLG_HR                          "FLG\\fhr-croatia.ico"
+ICON        ID_FLG_HU                          "FLG\\fhu-hungary.ico"
+ICON        ID_FLG_IS                          "FLG\\fis-iceland.ico"
+ICON        ID_FLG_IT                          "FLG\\fit-italy.ico"
+ICON        ID_FLG_LV                          "FLG\\flt-lithuania.ico"
+ICON        ID_FLG_LT                          "FLG\\flv-latvia.ico"
+ICON        ID_FLG_MK                          "FLG\\fmk-macedonia.ico"
+ICON        ID_FLG_NL                          "FLG\\fnl-netherlands.ico"
+ICON        ID_FLG_NO                          "FLG\\fno-norwey.ico"
+ICON        ID_FLG_PL                          "FLG\\fpl-poland.ico"
+ICON        ID_FLG_PO                          "FLG\\fpo-portugal.ico"
+ICON        ID_FLG_RO                          "FLG\\fro-romania.ico"
+ICON        ID_FLG_RU                          "FLG\\fru-russian.ico"
+ICON        ID_FLG_SF                          "FLG\\fsf-switzerland.ico"
+ICON        ID_FLG_SK                          "FLG\\fsk-slovakia.ico"
+ICON        ID_FLG_SL                          "FLG\\fsl-slovenia.ico"
+ICON        ID_FLG_SP                          "FLG\\fsp-spain.ico"
+ICON        ID_FLG_SQ                          "FLG\\fsq-albania.ico"
+ICON        ID_FLG_SR                          "FLG\\fsr-serbia.ico"
+ICON        ID_FLG_SU                          "FLG\\fsu-finland.ico"
+ICON        ID_FLG_SV                          "FLG\\fsv-sweden.ico"
+ICON        ID_FLG_TR                          "FLG\\ftr-turkey.ico"
+ICON        ID_FLG_UA                          "FLG\\fua-ukraine.ico"
+ICON        ID_FLG_UK                          "FLG\\fuk-uk.ico"
+ICON        ID_FLG_US                          "FLG\\fus-usa.ico"
+MENU ID_MNU_FULL MOVEABLE DISCARDABLE
+BEGIN
+    MENUITEM "~Setup...",              ID_MNU_SETUP, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Hide",                  ID_MNU_HIDE, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Remove from task list", ID_MNU_TASKLIST, MIS_TEXT, MIA_CHECKED
+    MENUITEM "~Transparent focus",     ID_MNU_TRANSPFC, MIS_TEXT, MIA_CHECKED
+    MENUITEM "~Float on top",          ID_MNU_FLOAT, MIS_TEXT, MIA_CHECKED
+    MENUITEM "Show layer ~Icon",       ID_MNU_SHOWICON, MIS_TEXT, MIA_CHECKED
+    MENUITEM SEPARATOR
+
+    SUBMENU "~Select layout",          ID_MNU_LAYOUT, MIS_TEXT
+    BEGIN
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "~Close",                 ID_MNU_CLOSE, MIS_TEXT
+END
+
+MENU ID_MNU_MINI MOVEABLE DISCARDABLE
+BEGIN
+    MENUITEM "~Setup...",              ID_MNU_SETUP, MIS_TEXT
+
+    SUBMENU "~Select layout",          ID_MNU_LAYOUT, MIS_TEXT
+    BEGIN
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "~Close",                 ID_MNU_CLOSE, MIS_TEXT
+END
+
+MENU ID_MNU_LAYOUTS MOVEABLE DISCARDABLE
+BEGIN
+    MENUITEM "~Assign hotkey\tENTER",  ID_MNU_HK_ASSIGN, MIS_TEXT
+    MENUITEM "~Delete hotkey\tDEL",    ID_MNU_HK_DELETE, MIS_TEXT
+END
+
+DLGTEMPLATE ID_WIN_LAYER01
+BEGIN
+    DIALOG "Keybord Layer/2 Setup Layer Page 01", ID_WIN_LAYER01, 266, 132, 190, 98,
+                FS_NOBYTEALIGN | NOT FS_DLGBORDER | WS_CLIPSIBLINGS |
+                WS_SAVEBITS
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL " Switch keys ",       ID_LAY_FRAME01, 7, 64, 177, 29,
+                                            WC_STATIC, SS_GROUPBOX |
+                                            DT_MNEMONIC | WS_VISIBLE
+        CONTROL "",                    ID_LAY_SWITCH, 50, 17, 126, 65,
+                                            WC_COMBOBOX, CBS_DROPDOWNLIST |
+                                            ES_ANY | WS_GROUP | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "Enable support of the ~SysTray/WPS", ID_LAY_SYSTRAY,
+                                        11, 52, 169, 8, WC_BUTTON,
+                                            BS_AUTOCHECKBOX | WS_GROUP |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "~Enable output to pipe: \\PIPE\\KBDLAY2", ID_LAY_PIPES,
+                                        11, 42, 169, 8, WC_BUTTON,
+                                            BS_AUTOCHECKBOX | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Beep after switch",  ID_LAY_BEEP, 11, 32, 168, 8, WC_BUTTON,
+                                            BS_AUTOCHECKBOX | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~VDM color synchronize", ID_LAY_VDMCOLOR, 11, 22, 168, 8,
+                                            WC_BUTTON, BS_AUTOCHECKBOX |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "",                    ID_LAY_TIMEOUT, 12, 6, 49, 10,
+                                            WC_SPINBUTTON, SPBS_MASTER |
+                                            SPBS_JUSTRIGHT | SPBS_NUMERICONLY |
+                                            SPBS_FASTSPIN | WS_TABSTOP |
+                                            WS_VISIBLE
+                CTLDATA 24, 0, 256, 0, 0, 0, 256, 0, 0, 0, 0, 0
+        CONTROL "Timeout, tenths of a second", ID_LAY_TIMETXT, 64, 7, 115, 7,
+                                            WC_STATIC, SS_TEXT | DT_LEFT |
+                                            DT_TOP | WS_VISIBLE
+                PRESPARAMS PP_FOREGROUNDCOLORINDEX, CLR_BLACK
+        CONTROL ID_WIN_INDICATOR,      ID_WIN_INDICATOR, 19, 69, 21, 16,
+                                            WC_STATIC, SS_ICON | WS_GROUP |
+                                            WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_ABOUT
+BEGIN
+    DIALOG "About Keyboard Layer/2", ID_WIN_ABOUT, 216, 123, 190, 98,
+                FS_NOBYTEALIGN | NOT FS_DLGBORDER | WS_CLIPSIBLINGS |
+                WS_SAVEBITS
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "",                    ID_ABO_TEXT, 7, 45, 178, 33, WC_STATIC,
+                                            SS_GROUPBOX | DT_MNEMONIC |
+                                            WS_GROUP | WS_VISIBLE
+        CONTROL "Keyboard Layer/2",    ID_ABO_TEXT, 43, 58, 137, 12, WC_STATIC,
+                                            SS_TEXT | DT_LEFT | DT_BOTTOM |
+                                            DT_MNEMONIC | WS_GROUP | WS_TABSTOP |
+                                            WS_VISIBLE
+                PRESPARAMS PP_FOREGROUNDCOLORINDEX, CLR_BLACK
+                PRESPARAMS PP_FONTNAMESIZE, "16.Times New Roman Bold"
+        CONTROL "Version 0.0.0",       ID_ABO_VERSION, 45, 50, 133, 6,
+                                            WC_STATIC, SS_TEXT | DT_LEFT |
+                                            DT_TOP | DT_MNEMONIC | WS_GROUP |
+                                            WS_VISIBLE
+                PRESPARAMS PP_FOREGROUNDCOLORINDEX, CLR_BLACK
+        CONTROL "Copyright (C) 1998-2006 by Dmitry A.Steklenev\012E-mail: glass@ptv.ru\012Home: http://glass.ptv.ru\012Home: http://glass.os2.spb.ru\012",
+                                       ID_ABO_RIGHTS, 7, 8, 173, 31, WC_STATIC,
+                                            SS_TEXT | DT_LEFT | DT_TOP |
+                                            DT_WORDBREAK | DT_MNEMONIC |
+                                            WS_GROUP | WS_VISIBLE
+                PRESPARAMS PP_FOREGROUNDCOLORINDEX, CLR_BLACK
+        CONTROL ID_WIN_INDICATOR,      ID_WIN_INDICATOR, 15, 52, 21, 16,
+                                            WC_STATIC, SS_ICON | WS_GROUP |
+                                            WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_LANGUAGE
+BEGIN
+    DIALOG "Keybaord Layer/2 Language Setup", ID_WIN_LANGUAGE, 240, 130, 190, 98,
+                FS_NOBYTEALIGN | NOT FS_DLGBORDER | WS_CLIPSIBLINGS |
+                WS_SAVEBITS
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL " Select Language",    ID_LNG_FRAME, 6, 54, 177, 29, WC_STATIC,
+                                            SS_GROUPBOX | DT_MNEMONIC |
+                                            WS_VISIBLE
+        CONTROL "",                    ID_LNG_SELECT, 49, 25, 126, 47,
+                                            WC_COMBOBOX, CBS_DROPDOWNLIST |
+                                            ES_ANY | WS_GROUP | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL ID_WIN_LANGUAGE,       ID_WIN_LANGUAGE, 18, 59, 21, 16,
+                                            WC_STATIC, SS_ICON | WS_GROUP |
+                                            WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_NOTEBOOK
+BEGIN
+    DIALOG "Keyboard Layer/2 Properties", ID_WIN_NOTEBOOK, 128, 52, 217, 165,
+                FS_NOBYTEALIGN | FS_SIZEBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS,
+                FCF_TITLEBAR | FCF_SYSMENU | FCF_CLOSEBUTTON
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "",                    ID_NBK_SETUP, 3, 26, 211, 136,
+                                            WC_NOTEBOOK, BKS_BACKPAGESTR |
+                                            BKS_MAJORTABTOP | BKS_TABBEDDIALOG |
+                                            WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL "~Ok",                 DID_OK, 26, 8, 42, 14, WC_BUTTON,
+                                            BS_PUSHBUTTON | BS_DEFAULT |
+                                            WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL "~Default",            ID_NBK_DEFAULT, 72, 8, 68, 14, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Cancel",             DID_CANCEL, 143, 8, 51, 14, WC_BUTTON,
+                                            BS_PUSHBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_LAYER02
+BEGIN
+    DIALOG "Keybord Layer/2 Setup Layer Page 02", ID_WIN_LAYER02, 242, 155, 190, 98,
+                FS_NOBYTEALIGN | NOT FS_DLGBORDER | WS_CLIPSIBLINGS |
+                WS_SAVEBITS
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "For new windows",     ID_LAY_FRAME02, 8, 8, 175, 44, WC_STATIC,
+                                            SS_GROUPBOX | WS_GROUP | WS_VISIBLE
+        CONTROL "~Latin layer of the keyboard", ID_LAY_LATIN, 16, 32, 154, 8,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CONTROL "~National layer of the keyboard", ID_LAY_NATIONAL,
+                                        16, 22, 154, 8, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Use system default", ID_LAY_SYSTEM, 16, 12, 154, 8, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_KEYPROMPT
+BEGIN
+    DIALOG "Assign hotkeys", ID_WIN_KEYPROMPT, 22, 36, 156, 49, FS_NOBYTEALIGN |
+                FS_DLGBORDER | WS_CLIPSIBLINGS | WS_SAVEBITS | WS_VISIBLE,
+                FCF_TITLEBAR | FCF_SYSMENU | FCF_CLOSEBUTTON
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "Press key combination or\012press ESC", ID_KEY_TEXT,
+                                        36, 6, 112, 28, WC_STATIC, SS_TEXT |
+                                            DT_LEFT | DT_TOP | DT_WORDBREAK |
+                                            WS_GROUP | WS_VISIBLE
+        CONTROL ID_ICO_KEYS,           ID_ICO_KEYS, 8, 18, 21, 16, WC_STATIC,
+                                            SS_ICON | WS_GROUP | WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_LAYOUT01
+BEGIN
+    DIALOG "Keybaord Layer/2 Layout Setup", ID_WIN_LAYOUT01, 238, 126, 190, 98,
+                FS_NOBYTEALIGN | NOT FS_DLGBORDER | WS_CLIPSIBLINGS |
+                WS_SAVEBITS
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "",                    ID_LOU_LIST, 5, 5, 180, 88, WC_CONTAINER,
+                                            CCS_SINGLESEL | CCS_AUTOPOSITION |
+                                            CCS_READONLY | CCS_MINIICONS |
+                                            WS_TABSTOP | WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE ID_WIN_LAYOUT02
+BEGIN
+    DIALOG "Keybord Layer/2 Setup Layouts Page 02", ID_WIN_LAYOUT02, 200, 141, 190, 98,
+                FS_NOBYTEALIGN | NOT FS_DLGBORDER | WS_CLIPSIBLINGS |
+                WS_SAVEBITS
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    PRESPARAMS PP_USER, "10.System Proportional"
+    BEGIN
+        CONTROL "After selection of layout", ID_LOU_FRAME02, 8, 8, 175, 44,
+                                            WC_STATIC, SS_GROUPBOX | WS_GROUP |
+                                            WS_VISIBLE
+        CONTROL "Select ~latin layer of the keyboard", ID_LOU_LATIN,
+                                        16, 32, 154, 8, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_GROUP |
+                                            WS_TABSTOP | WS_VISIBLE
+        CONTROL "Select ~national layer of the keyboard", ID_LOU_NATIONAL,
+                                        16, 22, 154, 8, WC_BUTTON,
+                                            BS_AUTORADIOBUTTON | WS_TABSTOP |
+                                            WS_VISIBLE
+        CONTROL "~Use system default", ID_LOU_NOCHANGE, 16, 12, 154, 8,
+                                            WC_BUTTON, BS_AUTORADIOBUTTON |
+                                            WS_TABSTOP | WS_VISIBLE
+    END
+END

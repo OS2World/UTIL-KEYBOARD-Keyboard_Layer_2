@@ -1,0 +1,4 @@
+OBJLST = kl_vdd.obj kl_trigger.obj
+
+kl_vdd.c: kl_vdd.h
+kl_trigger.obj: ..\KLayer\kl_trigger.cpp

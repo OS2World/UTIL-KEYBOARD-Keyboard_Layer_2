@@ -1,0 +1,165 @@
+Keyboard Layer/2
+----------------
+
+The brief description
+
+    Keyboard Layer/2 is the alternative keyboard layers and keyboard layouts
+    switcher for OS/2 version 4.0, 4.5 and eComStation. In addition driver
+    displays the current keyboard layer via the special indicator.
+
+    In case you're satisfied with standard keyboard switcher Keyboard
+    Layer/2 can be used simply as a current layer indicator. Just make sure
+    that "Don't touch my keyboard!" is selected in options.
+      
+    According to "IBM OS/2 Warp 4 Keyboards and code Layouts" switching
+    between latin and national keyboard layers should work in the following
+    countries:
+
+    The country and keyboard layouts
+    ------------------------------------------------------------------
+    The Arabian countries (ar and ar470)
+    Bulgaria (bg and bg241)
+    Greece (gk and el459)
+    Israel (il)
+    Latvia (lv)
+    Macedonia (mk)
+  * Russia (ru441 and ru443)
+    Serbia and Chernogoria (sr)
+    Thailand (th and th190)
+    ------------------------------------------------------------------
+      
+    * It is the only tested country
+
+Important notes
+---------------
+
+    If you have the HPFS386 Local Security feature enabled, you must make
+    sure that the Keyboard Layer/2 directory is always readable.
+
+Known problems
+--------------
+
+  - If the window of any program using similar with Keyboard Layer/2 pop-up 
+    algorithm will be overlayed with the indicator window most likely that
+    they will fight for superiority with 100% CPU loading. In this case
+    simply drag away one from another.
+
+  - ALT and SHIFT switching method works only in combination: (LEFT ALT and 
+    LEFT SHIFT) or (RIGHT ALT and RIGHT SHIFT). Don't try to use left ALT 
+    with right SHIFT and vice versa.
+    
+  - In full screen OS/2 sessions the standard switching is locked.
+
+  - With "Transparent focus" enabled Keyboard Layer/2 can not be activated
+    from a task list.
+
+  - The mode "Transparent focus" does not work with enabled (modes) "Move
+    Pointer to Focus", "Activate Window a Pointer" checkboxes and disabled
+    "Only When Pointer is Moved" ones in the NPS WPS Enhancer.
+
+History of changes
+------------------
+
+    Version 3.0.2
+
+    Fix: Fixed OS/2 3.0 installation.
+    Upd: The Keyboard Layer/2 does not do any operations, if the size of a
+         stack of the active program is below 1024 bytes.
+
+    Version 3.0.1
+
+    Upd: Keyboard Layer/2 is now covered by the GPL.
+    Upd: The layout indicator can show the selected layout and layer icon.
+    Upd: VDD is copied to OS/2 boot directory to avoid problems with its loading
+         at installation of the program in the directory containing spaces in
+         the name.
+    Add: Added feature of change of the keyboard layout "on the fly" via assigned
+         hot keys.
+    Upd: The SysTray/WPS support can be turned off.
+    Upd: Improved the keyboard layouts submenu.
+    Upd: The properties window is sizable.
+
+    Version 2.1.3
+
+    Upd: The keyboard layer switcher should work normally with ODIN and InnoTek 
+         applications.
+
+    Version 2.1.2
+
+    Fix: Problems with opening the message catalog at start of the
+         program from other directory.
+
+    Version 2.1.1
+
+    Fix: Installation and deinstallation utilities.
+
+    Version 2.1.0
+
+    Add: Added SysTray/WPS support.
+    Upd: New installation and deinstallation utilities.
+
+    Version 2.0.2
+
+    Upd: Keyboard layer for new windows is selected accordingly with it's
+         parent or owner. (Only if options of choice latin or national
+         layer is turned to "System defaults")
+
+    Version 2.0.1
+
+    Add: Added more hotkeys, like CTRL+SHIFT.
+    Add: Icons 40x40 are improved and the WPS object for LAYOUT.EXE 
+         is added to Keyboard Layer/2 folder.
+    Upd: Work around bugs in indicator hiding.
+
+    Version 2.0.0
+
+    Add: Added more hotkeys, like LEFT WINDOWS, WINDOWS MENU and etc.
+    Fix: Work around bugs in Process Commander 1.0
+    Add: Added utility LAYOUT.EXE (like OS/2 KEYB command).
+    Add: Layout changer.
+    Upd: The libraries PMBIDI.DLL and BDCALL32 (for support OS/2 Warp 
+         Version 3.0) are included in the distribution of a package. 
+    Add: Options for select default keyboard layer for new windows.
+    Add: Change current keyboard layout from popup menu.
+    Fix: Boot drive detection in installation script.
+
+    Version 1.1.0
+
+    Upd: Colors, font and position for the indicator are saved immediately.
+    Add: Russian menus, dialogues and installation program.
+    Add: Timeout for switching combination. If switching sequence won't be
+         completed during defined time interval layout switching won't  
+         happen.
+    Add: The switch "Float on top" added in the context-sensitive menu.
+    Upd: Added more hotkeys, like LEFT CONTROL and etc.
+
+    Version 1.0.1
+
+    Fix: Spontaneous switching in full screen sessions with LEFT SHIFT 
+         and RIGHT SHIFT selected.
+    Upd: pop-up algorithm of the indicator.
+
+    Version 1.0.0
+
+    Add: mode "Transparent focus" is added.
+
+Special thanks
+--------------
+
+    - to Oleg Kostyuchenko aka Chill and Vadim Vozniouk aka Pirks
+      for assistance in translation of all this in English.
+    - to Yaroslav Komarov for the SysTray/WPS support.
+
+Technical support
+-----------------
+
+    If there are questions about the Keyboard Layer/2, send them via E-mail
+    to:
+                glass@ptv.ru
+
+    Also you can take a look on my pages:
+
+                http://glass.os2.spb.ru/
+                http://glass.ptv.ru/
+
+    Dmitry A. Steklenev
