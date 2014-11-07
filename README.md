@@ -5,7 +5,7 @@ Keyboard Layer/2 is the alternative keyboard layouts switcher for OS/2 / eComSta
 
 LICENSE
 ===============
-* Freeware
+* GNU GPL
 
 COMPILE TOOLS
 ===============
